@@ -2,17 +2,14 @@
 
 namespace App\Livewire;
 
+use App\Livewire\Forms\PostForm;
 use App\Models\Post;
 use Livewire\Attributes\Validate;
 use Livewire\Component;
 
 class CreatePost extends Component
 {
-    #[Validate('required|min:5')]
-    public string $title = '';
-
-    #[Validate('required|min:5')]
-    public string $body = '';
+    public PostForm $form;
 
     public bool $success = false;
     public function render()
@@ -23,13 +20,9 @@ class CreatePost extends Component
     public function save(): void {
         $this->validate();
 
-        Post::create([
-            'title' => $this->title,
-            'body' => $this->body,
-        ]);
+        $this->form->save();
 
         $this->success = true;
 
-        $this->reset('title', 'body');
     }
 }
