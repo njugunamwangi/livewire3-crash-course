@@ -1,6 +1,7 @@
 <?php
 
 use App\Livewire\CreatePost;
+use App\Livewire\EditPost;
 use Illuminate\Support\Facades\Route;
 
 Route::view('/', 'welcome');
@@ -16,4 +17,4 @@ Route::view('profile', 'profile')
 require __DIR__.'/auth.php';
 
 Route::get('posts/create', CreatePost::class);
-Route::view('posts/{post}/edit', 'posts.edit');
+Route::get('posts/{post}/edit', EditPost::class);
