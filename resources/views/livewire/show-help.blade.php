@@ -1,5 +1,5 @@
 <div>
-    <button wire:click="toggleHelp" class="px-4 py-2 bg-gray-800 rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700">
+    <button wire:click="$set('showHelp', 'true')" class="px-4 py-2 bg-gray-800 rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700">
         Toggle help
     </button>
 

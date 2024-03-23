@@ -9,11 +9,6 @@ class ShowHelp extends Component
 {
     public bool $showHelp = false;
 
-    public function toggleHelp(): void
-    {
-        $this->showHelp = ! $this->showHelp;
-    }
-
     #[Layout('layouts.app')]
     public function render()
     {
