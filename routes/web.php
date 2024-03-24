@@ -3,6 +3,7 @@
 use App\Livewire\CreatePost;
 use App\Livewire\EditPost;
 use App\Livewire\ShowHelp;
+use App\Livewire\ShowPosts;
 use Illuminate\Support\Facades\Route;
 
 Route::view('/', 'welcome');
@@ -20,3 +21,4 @@ require __DIR__.'/auth.php';
 Route::get('posts/create', CreatePost::class);
 Route::get('posts/{post}/edit', EditPost::class);
 Route::get('help', ShowHelp::class);
+Route::get('posts', ShowPosts::class);
